@@ -34,16 +34,19 @@
                         <div class="row">
                             <div class="col-md-3 col-sm-2">
                                 <div class="logo">
-                                    <a href="index.html"><img src="img/laundry.png" alt="Site Logo" width="50" height="50"></a>          
+                                    <a href="index.php"><img src="img/laundry.png" alt="Site Logo" width="50" height="50"></a>          
                                 </div>
                             </div>
                             <div class="col-md-9 col-sm-10 nav_area">
                                 <nav class="main_menu">
                                     <div class="navbar-collapse collapse"> 
                                         <ul class="nav navbar-nav navbar-right">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="Location&ContactUs.html">Contact</a></li>
-                                            <li><a href="Reservation.html">Reservation</a></li>
+                                         <li><a href="index.php">Home</a></li>
+                                         <li><a href="current.php">This Week</a></li>
+                                         <li><a href="next.php">Next Week</a></li>
+                                         <li><a href="Reservation.html">Reservation</a></li>
+                                         <li><a href="Location&ContactUs.html">Contact</a></li>
+
                                         </ul>
                                     </div>
                                 </nav>
@@ -61,13 +64,13 @@
            <section>
             <div class="container">
 
-                <div class="back_nav">
+                <div class="back_nav" style="background-color: #1a75f4">
                     <div class="col-sm-5">
                         <h2>Reserve Yours</h2>
                     </div>
                     <div class="col-sm-7">
                         <ul class="text_a_r" style="text-align: right;">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.php">Home</a></li>
                         </ul>
                     </div>
                 </div>
@@ -79,7 +82,7 @@
          <h3> Laundry Reservation Form </h3><br>
         <form>
             <form>
-                <p><input type="date"></p>
+                <p><input type="date" id="dateInput"></p>
                 <p><input type="submit" value="Check Availability"></p>
                 <br>
             </form>
@@ -126,12 +129,16 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
-        <script src="js/bootstrap.min.js"></script>
         ​
-        <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-        
-        </script>
+
+	<script>
+		document.getElementById("dateInput").addEventListener("change", function(){
+			let input = this.value;
+			let dateEntered = new Date(input);
+			console.log(input);
+			console.log(dateEntered);
+		});
+	</script>
         </body>
         
         </html>
