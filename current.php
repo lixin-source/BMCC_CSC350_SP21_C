@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Laundry Booking</title>
 
+    <style>
+    <?php include "css/style.css" ?>
+    </style>
     <!-- Google/Custom font -->
     <link
         href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic'
@@ -19,11 +22,11 @@
 
     <!-- Font awesome css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png">
     <link rel="shortcut icon" type="image/png" href="img/favi-con.png" />
+
 </head>
 
 <body>
@@ -35,35 +38,41 @@ $username = "newuser";
 $password = "password"; 
 $database = "csc350"; 
 $mysqli = new mysqli("localhost", $username, $password, $database); 
-$query = "SELECT * FROM schedule WHERE  YEARWEEK(`date`, 1) = YEARWEEK(CURDATE(), 1
-);";
+
+
+$arr;
+$query = "SELECT * FROM data WHERE YEARWEEK(`date`, 1) = YEARWEEK(CURDATE(), 1);";
 
 if ($result = $mysqli->query($query)) {
-    while ($row = $result->fetch_assoc()) {
-        $date    = $row["date"];
-        $first   = $row["first"] ? Reserved : Available;
-        $second  = $row["second"] ? Reserved : Available;
-        $third   = $row["third"] ? Reserved : Available;
-        $fourth  = $row["fourth"] ? Reserved : Available;
-        $fifth   = $row["fifth"] ? Reserved : Available; 
-        $sixth   = $row["sixth"] ? Reserved : Available;
-        $seventh = $row["seventh"] ? Reserved : Available;
-        $eighth  = $row["eighth"] ? Reserved : Available;
-
-        echo '<tr> 
-                  <td>'.$date.'</td> 
-                  <td>	<a href="http://example.com">'.$first.'</a></td> 
-                  <td>	<a href="http://example.com">'.$second.'</a></td> 
-                  <td>	<a href="http://example.com">'.$third.'</a></td> 
-                  <td>	<a href="http://example.com">'.$fourth.'</a></td> 
-                  <td>	<a href="http://example.com">'.$fifth.'</a></td> 
-                  <td>	<a href="http://example.com">'.$sixth.'</a></td> 
-                  <td>	<a href="http://example.com">'.$seventh.'</a></td> 
-                  <td>	<a href="http://example.com">'.$eighth.'</a></td> 
-              </tr>';
-    }
-    $result->free();
+	while ($row = $result->fetch_assoc()) {
+		$time = $row['time'];
+		$arr[$time] = 1;
+	}
 }
+$result->free();
+
+$monday = strtotime("last monday");
+$monday = date('w', $monday)==date('w') ? $monday+7*86400 : $monday;
+
+for ($i = 0; $i < 56; $i++){
+	if ($i % 8 == 0){
+		$day = $monday + (86400  * ($i / 8));
+		echo '<tr>
+			<td>' . date("m-d-Y", $day) . '</td>';
+	}
+	
+	if (array_key_exists($i, $arr)){
+		echo '<td>Reserved</td>';
+	}else{
+		echo '<td> <a href="signup.php?current=1&time='.$i.'">Available</a></td>';
+	}
+
+	if ($i % 8 == 7){
+		echo '</tr>';	
+	}
+}
+
+
 } 
 ?>
 
@@ -77,7 +86,7 @@ if ($result = $mysqli->query($query)) {
                                 <a href="index.php"><img src="img/laundry.png" alt="Site Logo" width="50"
                                         height="50"></a>
                             </div>
-			    <p>Current Week</p>
+			    <p class="red fancy">This Week</p>
                         </div>
                         <div class="col-md-9 col-sm-10 nav_area">
                             <nav class="main_menu">
@@ -86,8 +95,9 @@ if ($result = $mysqli->query($query)) {
                                         <li><a href="index.php">Home</a></li>
                                         <li><a href="current.php">This Week</a></li>
                                         <li><a href="next.php">Next Week</a></li>
-                                        <li><a href="Reservation.html">Reservation</a></li>
-                                        <li><a href="Location&ContactUs.html">Contact</a></li>
+                                        <li><a href="myschedule.php">My Schedule</a></li>
+                                        <li><a href="myinfo.php">My Page</a></li>
+                                        <li><a href="Contact.php">Contact</a></li>
                                     </ul>
                                 </div>
                             </nav>

@@ -7,13 +7,17 @@
 <!-- Bootstrap JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="css/style.css">
+<style>
+<?php include "css/style.css" ?>
+</style>
 
+<title>Laundry Booking</title>
 </head>
 
 <body>
-
-
+<br><br>
+<h1 class="welcome">Welcome To Laundry Sign-Up!</h1>
+<br>
 <!--test-->
 <!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
 
@@ -58,7 +62,7 @@
               <li><span class="fa-li"><i class="fas fa-check"></i></span>Tell Us Any Problems</li>
               <li><span class="fa-li"><i class="fas fa-check"></i></span>We Will Contact You ASAP</li>
             </ul>
-            <a href="./Location&ContactUs.html" class="btn btn-block btn-primary text-uppercase">Click</a>
+            <a href="./Contact.php" class="btn btn-block btn-primary text-uppercase">Click</a>
           </div>
         </div>
       </div>

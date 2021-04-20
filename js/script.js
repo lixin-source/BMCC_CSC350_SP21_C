@@ -77,7 +77,3 @@ function finalCost(){
     document.getElementById("result").innerHTML = total;
 }
 
-function CheckAvailability()
-{
-	
-}

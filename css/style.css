@@ -93,7 +93,6 @@ Header
     padding: 8px 14px;
     text-transform: uppercase;
 }
-/*
 .main_header ul.nav.navbar-nav li:last-child a{
     margin-left: 14px;
     padding: 8px 20px;
@@ -105,17 +104,25 @@ Header
     -moz-box-shadow: -1px 3px 18px -1px rgba(30, 126, 247,0.86);
     box-shadow: -1px 3px 18px -1px rgba(30, 126, 247,0.86);
 }
-*/
 .section-padding {
     padding: 30px 0;
 }
-
-
+.red{
+    color: #576675;
+    font-size: 30px;
+}
+.fancy {
+    font-weight: bold;
+    text-shadow: 4px 4px 3px #77f;
+}
+.welcome{
+    color: Tomato;
+    text-align: center;
+}
 
 /* --------------------------------------------------------
 .back_nav
 -----------------------------------------------------------*/
-/*
 .back_nav{
     background: rgba(30, 126, 247,0.86);
     overflow: hidden;
@@ -156,8 +163,6 @@ Header
   top: 1px;
     color: #fff;
 }
-*/
-
 
 /* --------------------------------------------------------
 Home Page
@@ -371,5 +376,14 @@ Reservation Page
 .result_box_text span {
     color: #614136;
     font-size: 26px;
+    text-align: center;
+
+}
+
+
+/* --------------------------------------------------------
+myschedule Page
+-----------------------------------------------------------*/
+.radiobtns{
     text-align: center;
 }
