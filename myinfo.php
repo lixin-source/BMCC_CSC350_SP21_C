@@ -20,7 +20,7 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-2">
                             <div class="logo">
-                                <a href="index.php"><img src="img/laundry.png" alt="Site Logo" width="50"
+                                <a href="index"><img src="img/laundry.png" alt="Site Logo" width="50"
                                         height="50"></a>
                             </div>
 			    <p class="red fancy">My Page</p>
@@ -29,12 +29,12 @@
                             <nav class="main_menu">
                                 <div class="navbar-collapse collapse">
                                     <ul class="nav navbar-nav navbar-right">
-                                        <li><a href="index.php">Home</a></li>
-                                        <li><a href="current.php">This Week</a></li>
-                                        <li><a href="next.php">Next Week</a></li>
-                                        <li><a href="myschedule.php">My Schedule</a></li>
-                                        <li><a href="myinfo.php">My Page</a></li>
-                                        <li><a href="Contact.php">Contact</a></li>
+                                        <li><a href="index">Home</a></li>
+                                        <li><a href="current">This Week</a></li>
+                                        <li><a href="next">Next Week</a></li>
+                                        <li><a href="myschedule">My Schedule</a></li>
+                                        <li><a href="myinfo">My Page</a></li>
+                                        <li><a href="Contact">Contact</a></li>
                                     </ul>
                                 </div>
                             </nav>

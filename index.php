@@ -34,7 +34,7 @@
               <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>First Come, First Served</strong></li>
               <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Only 8 slots a day for 3 hours</strong></li>
             </ul>
-            <a href="./current.php" class="btn btn-block btn-primary text-uppercase">Reserve</a>
+            <a href="./current" class="btn btn-block btn-primary text-uppercase">Reserve</a>
           </div>
         </div>
       </div>
@@ -48,7 +48,7 @@
               <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>First Come, First Served</strong></li>
               <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Only 8 slots a day for 3 hours</strong></li>
             </ul>
-            <a href="./next.php" class="btn btn-block btn-primary text-uppercase">Reserve</a>
+            <a href="./next" class="btn btn-block btn-primary text-uppercase">Reserve</a>
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@
               <li><span class="fa-li"><i class="fas fa-check"></i></span>Tell Us Any Problems</li>
               <li><span class="fa-li"><i class="fas fa-check"></i></span>We Will Contact You ASAP</li>
             </ul>
-            <a href="./Contact.php" class="btn btn-block btn-primary text-uppercase">Click</a>
+            <a href="./Contact" class="btn btn-block btn-primary text-uppercase">Click</a>
           </div>
         </div>
       </div>
