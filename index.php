@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- Bootstrap css -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<!-- Bootstrap JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 <style>
@@ -18,13 +16,9 @@
 <br><br>
 <h1 class="welcome">Welcome To Laundry Sign-Up!</h1>
 <br>
-<!--test-->
-<!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
-
 <section class="pricing py-5">
   <div class="container">
     <div class="row">
-      <!-- Free Tier -->
       <div class="col-lg-4">
         <div class="card mb-5 mb-lg-0">
           <div class="card-body">
@@ -38,7 +32,6 @@
           </div>
         </div>
       </div>
-      <!-- Plus Tier -->
       <div class="col-lg-4">
         <div class="card mb-5 mb-lg-0">
           <div class="card-body">
@@ -52,7 +45,6 @@
           </div>
         </div>
       </div>
-      <!-- Pro Tier -->
       <div class="col-lg-4">
         <div class="card">
           <div class="card-body">
@@ -69,8 +61,6 @@
     </div>
   </div>
 </section>
-<!--end-->
-
 </body>
 </html>
 

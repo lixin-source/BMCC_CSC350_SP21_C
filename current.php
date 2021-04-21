@@ -9,28 +9,17 @@
     <style>
     <?php include "css/style.css" ?>
     </style>
-    <!-- Google/Custom font -->
     <link
         href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic'
         rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic'
         rel='stylesheet' type='text/css'>
-
-
-    <!-- Bootstrap css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <!-- Font awesome css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png">
     <link rel="shortcut icon" type="image/png" href="img/favi-con.png" />
-
 </head>
-
 <body>
-
 <?php
 function SetTable()
 {
@@ -133,5 +122,4 @@ for ($i = 0; $i < 56; $i++){
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="js/bootstrap.min.js"></script>
     </body>
-    
-    </html>
+</html>

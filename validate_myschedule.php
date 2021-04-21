@@ -111,8 +111,6 @@ if ($isUserInNextWeek){
 }else{
 	$invalidUser = "There isn't such a user";	
 }
-
-
 }
 }
 ?>
@@ -121,19 +119,15 @@ if ($isUserInNextWeek){
 <html lang="en">
   <head>
     <title>My Schedule</title>
-  
 	<style>
     <?php include "css/style.css" ?>
     </style>
-	
 	<script src="js/script.js" type="text/javascript"></script>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Bootstrap contact form with PHP example by BootstrapBay.com.">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <style>
 h1{
     color: Tomato;
@@ -188,16 +182,18 @@ if ($errName || $errPassword)
 	echo "<br><br><h2>Failed. You MUST Fill Out All</h2>";
 }
 
-if ($isUserInWeek)
-{
 echo '<div class="container">
 		<div class="row">
 		<form id="myForm" action="delete_data.php" method="post">';
+
+if ($isUserInWeek)
+{
 
 $str = strtoupper($input_name);
 echo "<div class='col-lg-3'>
         <div class='card'>
           <div class='card-body'>
+		    <br>
             <h5 class='card-title text-muted text-uppercase text-center'>This Week Schedule</h5>
             <hr>
             <ul class='fa-ul'>
@@ -215,13 +211,14 @@ if ($isUserInNextWeek)
 echo "<div class='col-lg-3'>
         <div class='card'>
           <div class='card-body'>
+		    <br>
             <h5 class='card-title text-muted text-uppercase text-center'>Next Week Schedule</h5>
             <hr>
             <ul class='fa-ul'>
               <li><span class='fa-li'><i class='fas fa-check'></i></span>$next_dday</li>
               <li><span class='fa-li'><i class='fas fa-check'></i></span>$next_slot</li>
             </ul>
-            <a href='delete_data.php?curr=0&name=$input_name' id='cancel' class='btn btn-block btn-primary text-uppercase'>Cancel</a>
+            <a href='delete_data.php?curr=1&name=$input_name' id='cancel' class='btn btn-block btn-primary text-uppercase'>Cancel</a>
           </div>
         </div>
       </div>";
@@ -240,7 +237,7 @@ elseif (!$isUserInWeek && !$isUserInNextWeek){
 }
 ?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>
