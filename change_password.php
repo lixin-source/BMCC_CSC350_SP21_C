@@ -13,12 +13,8 @@ if (isset($_POST["submit"])) {
 	if (!$_POST['new']) {
 		$errNew = 'Please enter your new password';
 	}
-	
-if (!$errWeek && !$errName && !$errPassword) {
-$username = "newuser"; 
-$password = "password"; 
-$database = "csc350"; 
-$mysqli = new mysqli("localhost", $username, $password, $database); 
+if (!$errOld && !$errName && !$errNew) {
+include_once('db.php');
 
 $isUser = false;
 
@@ -26,9 +22,9 @@ $query = "select * from users;";
 if ($query_result = $mysqli->query($query)){
     while ($row = $query_result->fetch_assoc()) {
 	$name = $row['name'];
-        $pw   = $row['password'];	
+	$pw   = $row['password'];	
 	
-	if ($name == $input_name && $pw == $input_old_pw)
+	if ($name == $input_name && strcmp((string)$pw, (string)$input_old_pw) == 0)
 	{
 	    $isUser = true;
 	    break;
@@ -44,6 +40,9 @@ if ($isUser){
 	$invalidMsg = "There isn't such a user";
 }
 
+}else
+{
+	$invalidMsg = "There isn't such a user";
 }
 }
 ?>
@@ -53,12 +52,12 @@ if ($isUser){
   <head>
     <style>
     <?php include "css/style.css" ?>
+    <?php include "css/my.css" ?>
     </style>
     <title>My Page</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <style>
 h1{
     color: Tomato;
@@ -73,48 +72,36 @@ h2
 }
     </style>
   </head>
-    <header class="header_area" style="background-color: white;">
-        <div class="header_bottom">
-            <div class="container">
-                <div class="main_header">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-2">
-                            <div class="logo">
-                                <a href="index"><img src="img/laundry.png" alt="Site Logo" width="50"
-                                        height="50"></a>
-                            </div>
-			    <p class="red fancy">My Page</p>
-                        </div>
-                        <div class="col-md-9 col-sm-10 nav_area">
-                            <nav class="main_menu">
-                                <div class="navbar-collapse collapse">
-                                    <ul class="nav navbar-nav navbar-right">
-                                        <li><a href="index">Home</a></li>
-                                        <li><a href="current">This Week</a></li>
-                                        <li><a href="next">Next Week</a></li>
-                                        <li><a href="myschedule">My Schedule</a></li>
-                                        <li><a href="myinfo">My Page</a></li>
-                                        <li><a href="Contact">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </nav>
+    <header>
+    <nav class="navbar">
+	<div class="navbar_logo">
+	<a href="index"><img src="img/laundry.png" alt="Site Logo" width="50"
+	height="50"></a>
+	</div>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+	<ul class="navbar_menu">
+                                        <li><a href="index">HOME</a></li>
+                                        <li><a href="current">THIS WEEK</a></li>
+                                        <li><a href="next">NEXT WEEK</a></li>
+                                        <li><a href="myschedule">MY SCHEDULE</a></li>
+                                        <li><a href="myinfo">MY PAGE</a></li>
+                                        <li><a href="Contact">CONTACT</a></li>
+	</ul>
+
+    </nav>
+    </header>	
+
+	<p class="red fancy">My Page</p>
+
   <body>
+
 
 <?php 
 if ($errName || $errPassword || $errWeek)
 {
 	echo "<br><br><h2>Failed. You MUST Fill Out All</h2>";
 }
-?>
 
-<?php 
 if ($invalidMsg)
 {
 	echo "<h1>$invalidMsg</h1><br><br><h1>Please Type a Correct Name or Password</h1>";
@@ -124,9 +111,6 @@ elseif ($result)
 	echo "<br><br><h1>$result</h1><br>";
 }
 ?>
-    	
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>

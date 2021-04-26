@@ -8,12 +8,8 @@
 
     <style>
     <?php include "css/style.css" ?>
+	<?php include "css/my.css" ?>
     </style>
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" type="image/png" href="img/favi-con.png" />
 </head>
 <body>
 <?php
@@ -60,40 +56,26 @@ for ($i = 0; $i < 56; $i++){
 
 } 
 ?>
+    <header>
+    <nav class="navbar">
+	<div class="navbar_logo">
+	<a href="index"><img src="img/laundry.png" alt="Site Logo" width="50"
+	height="50"></a>
+	</div>
 
-    <header class="header_area" style="background-color: white;">
-        <div class="header_bottom">
-            <div class="container">
-                <div class="main_header">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-2">
-                            <div class="logo">
-                                <a href="index"><img src="img/laundry.png" alt="Site Logo" width="50"
-                                        height="50"></a>
-                            </div>
-			    <p class="red fancy">This Week</p>
-                        </div>
-                        <div class="col-md-9 col-sm-10 nav_area">
-                            <nav class="main_menu">
-                                <div class="navbar-collapse collapse">
-                                    <ul class="nav navbar-nav navbar-right">
-                                        <li><a href="index">Home</a></li>
-                                        <li><a href="current">This Week</a></li>
-                                        <li><a href="next">Next Week</a></li>
-                                        <li><a href="myschedule">My Schedule</a></li>
-                                        <li><a href="myinfo">My Page</a></li>
-                                        <li><a href="Contact">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </nav>
+	<ul class="navbar_menu">
+                                        <li><a href="index">HOME</a></li>
+                                        <li><a href="current">THIS WEEK</a></li>
+                                        <li><a href="next">NEXT WEEK</a></li>
+                                        <li><a href="myschedule">MY SCHEDULE</a></li>
+                                        <li><a href="myinfo">MY PAGE</a></li>
+                                        <li><a href="Contact">CONTACT</a></li>
+	</ul>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    </nav>
+    </header>	
 
+	<p class="red fancy">This Week</p>
     <div class="container" id="schedule_table" style="background-color: white;padding:0;">
         <table style="width:100%">
             <tr>
@@ -112,10 +94,5 @@ for ($i = 0; $i < 56; $i++){
         </table>
     </div>
     ​​
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
