@@ -1,4 +1,4 @@
-shareusinfo.com
+http://shareusinfo.com/current
 
 [TEST]
 ID: jeff
