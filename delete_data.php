@@ -56,7 +56,6 @@ else
 	</div>
 
 	<ul class="navbar_menu">
-                                        <li><a href="index">HOME</a></li>
                                         <li><a href="current">THIS WEEK</a></li>
                                         <li><a href="next">NEXT WEEK</a></li>
                                         <li><a href="myschedule">MY SCHEDULE</a></li>
