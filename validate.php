@@ -13,10 +13,7 @@ if (isset($_POST["submit"])) {
 	}
 
 if (!$errName && !$errPassword) {
-$username = "newuser"; 
-$password = "password"; 
-$database = "csc350"; 
-$mysqli = new mysqli("localhost", $username, $password, $database); 
+	include_once('db.php');
 
 $user_apt_by_db = '';
 $isUser = false;
