@@ -104,7 +104,7 @@ animation: fadeIn 1s;
 <div class="form-group">
 <label for="aptno" class="col-sm-2 control-label">Password</label>
 <div class="col-sm-10">
-<input type="text" class="form-control" id="password" name="password" placeholder="">
+<input class="form-control" id="password" name="password" type="password" placeholder="">
 <?php echo "<p class='text-danger'>$errPassword</p>";?>
 </div>
 </div>

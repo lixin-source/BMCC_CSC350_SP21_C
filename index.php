@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<br><br><br>
+<br><br>
 <h1 class="welcome">Welcome To Laundry Sign-Up!</h1>
 <br>
 <section class="pricing py-5">

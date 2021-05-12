@@ -50,13 +50,13 @@
 					<div class="form-group">
 						<label for="old" class="col-sm-2 control-label">Current Password</label>
 						<div class="col-sm-10"> 
-							<input type="text" class="form-control" id="old" name="old" placeholder="">
+							<input type="password" class="form-control" id="old" name="old" placeholder="">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="new" class="col-sm-2 control-label">New Password</label>
 						<div class="col-sm-10"> 
-							<input type="text" class="form-control" id="new" name="new" placeholder="">
+							<input type="password" class="form-control" id="new" name="new" placeholder="">
 						</div>
 					</div>
 					<div class="form-group">
