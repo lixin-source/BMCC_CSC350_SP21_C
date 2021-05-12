@@ -6,7 +6,7 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8">
-    <title>PHP</title>
+    <title>Logout Page</title>
     <link rel="stylesheet" href="css/login.css">
     <style>
         body {
@@ -20,7 +20,7 @@
 	    <?php
 	      if ( isset($_SESSION['username'])) {
 	        session_destroy();
-	        echo '<h1>Successfully Logged Out</h1>';
+	        echo '<h1>Good to Go</h1>';
 	      } else {
 	        echo '<h1>You Are Not Logged In</h1>';
 	      }
@@ -33,3 +33,4 @@
 	</div>
 </body>
 </html>
+
