@@ -1,3 +1,7 @@
+<?php
+	include 'inc_head.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,6 +70,7 @@ for ($i = 0; $i < 56; $i++){
                                         <li><a href="myschedule">MY SCHEDULE</a></li>
                                         <li><a href="myinfo">MY PAGE</a></li>
                                         <li><a href="Contact">CONTACT</a></li>
+                                        <li><a href="logout">LOGOUT</a></li>
 	</ul>
 
     </nav>

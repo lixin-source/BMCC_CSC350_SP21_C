@@ -25,6 +25,7 @@
                                         <li><a href="myschedule">MY SCHEDULE</a></li>
                                         <li><a href="myinfo">MY PAGE</a></li>
                                         <li><a href="Contact">CONTACT</a></li>
+                                        <li><a href="logout">LOGOUT</a></li>
 	</ul>
 
     </nav>
