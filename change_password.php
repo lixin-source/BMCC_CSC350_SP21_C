@@ -1,4 +1,6 @@
 <?php
+include 'inc_head.php';
+
 if (isset($_POST["submit"])) {
 	$input_name   = $_POST['name'];
 	$input_old_pw = $_POST['old'];	

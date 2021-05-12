@@ -1,3 +1,7 @@
+<?php
+	include 'inc_head.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

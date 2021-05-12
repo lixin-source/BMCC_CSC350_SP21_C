@@ -1,5 +1,8 @@
 <?php
-include_once('db.php');
+
+	include 'inc_head.php';
+
+	include_once('db.php');
 $week = $_GET['curr'];
 if ($week == 1)
 {
